@@ -10,7 +10,7 @@ export default function About() {
     <>
       <section
         id="about"
-        className="py-20 px-4 sm:px-8 lg:px-24 text-white flex items-center justify-center"
+        className="relative z-10 bg-gray-900 py-20 px-4 sm:px-8 lg:px-24 text-white flex items-center justify-center"
       >
         <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <figure
@@ -18,9 +18,6 @@ export default function About() {
             data-aos-delay="500"
             className="flex flex-wrap justify-center gap-4 relative"
           >
-            <div
-              className="absolute right-0 -top-6 sm:-top-10 w-40 h-40 sm:w-60 sm:h-60 lg:w-80 lg:h-80 bg-gradient-to-r from-[#6d2897] via-[#6c95f5] to-[#bb61c5] rotate-12 rounded-full -z-10"
-            ></div>
             <img
               src={img_about1}
               alt="about picture 1"
@@ -43,7 +40,6 @@ export default function About() {
             data-aos-delay="500"
             className="text-center lg:text-left relative mt-10 lg:mt-0 px-2 sm:px-4"
           >
-            <div className="absolute -z-10 w-32 h-32 sm:w-48 sm:h-48 bg-[#cd3cf5] rounded-full blur-3xl opacity-40 -top-6 left-8"></div>
             <header>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
                 About Me

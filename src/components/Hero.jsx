@@ -12,7 +12,7 @@ export default function Hero() {
     <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] md:min-h-screen flex flex-col items-center">
       {/* Decorative gradient blob */}
       <div
-        className="absolute right-0 sm:right-10 -top-20 sm:top-24 w-64 sm:w-96 lg:w-[450px] h-64 sm:h-96 lg:h-[550px] bg-gradient-to-r from-[#6d2897] via-[#8e6cf5] to-[#bb61c5] rotate-45 rounded-3xl -z-10"
+        className="absolute right-0 sm:right-10 top-0 w-64 sm:w-96 lg:w-[450px] h-64 sm:h-96 lg:h-[550px] bg-gradient-to-r from-[#6d2897] via-[#8e6cf5] to-[#bb61c5] rotate-45 rounded-3xl -z-10"
       />
 
       {/* Navigation */}

@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <header
-      className="fixed top-0 left-0 w-full z-20 text-white"
+      className="fixed top-0 left-0 w-full z-50 bg-gray-800 text-white"
       data-aos="fade-up"
       data-aos-delay="300"
     >
@@ -42,7 +42,7 @@ export default function Navbar() {
             <a
               key={link.id}
               href={link.link}
-              className="hover:text-gray-300 text-lg"
+              className="hover:text-gray-300 text-lg bg-clip-text text-transparent bg-gradient-to-r from-green-200 via-green-300 to-green-400"
             >
               {link.name}
             </a>
