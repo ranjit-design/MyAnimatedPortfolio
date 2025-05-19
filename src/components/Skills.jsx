@@ -35,7 +35,7 @@ const skillsData = [
 ];
 
 const SkillBox = ({ image, title, description }) => {
-  return(<article className="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg text-center hover:bg-purple-800 transition-all duration-300">
+  return(<article className="p-4 sm:p-6 rounded-lg shadow-lg text-center transition-all duration-300">
     <figure className="flex justify-center mb-4">
       <img src={image} alt={title} className="w-16 h-16 sm:w-20 sm:h-20" />
     </figure>

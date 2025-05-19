@@ -5,7 +5,7 @@ import project3 from "/project3.png";
 
 const ProjectCard = ({ image, title, description, link }) => {
   return (
-    <article className="relative  max-w-sm bg-gray-800 rounded overflow-hidden shadow-lg group">
+    <article className="relative max-w-sm rounded overflow-hidden shadow-lg group">
   <div className="absolute mt-1000 z-0 w-40 h-40 sm:w-60 sm:h-60 bg-[#cd3cf5] rounded-full blur-3xl opacity-50 -top-5 left-10"></div>
   <div className="relative z-10"> {/* <- changed from absolute z-0 to relative z-10 */}
 

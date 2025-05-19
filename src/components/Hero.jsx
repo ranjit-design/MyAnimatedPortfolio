@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./Navbar";
 import imghero from "/imghero.png";
 import github from "/github.png";
 import linkedin from "/linkedin.png";
@@ -14,9 +13,6 @@ export default function Hero() {
       <div
         className="absolute right-0 sm:right-10 top-0 w-64 sm:w-96 lg:w-[450px] h-64 sm:h-96 lg:h-[550px] bg-gradient-to-r from-[#6d2897] via-[#8e6cf5] to-[#bb61c5] rotate-45 rounded-3xl -z-10"
       />
-
-      {/* Navigation */}
-      <Navbar />
 
       {/* Content */}
       <main

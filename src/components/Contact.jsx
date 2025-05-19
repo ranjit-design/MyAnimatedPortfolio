@@ -29,13 +29,13 @@ export default function Contact() {
   };
 
   return (
-    <main id="contact" className="min-h-screen bg-gray-900">
+    <main id="contact" className="min-h-screen">
       <section
         data-aos="fade-up"
         data-aos-delay="300"
         className="container mx-auto px-4 py-24 flex items-center justify-center min-h-screen"
       >
-      <article className="shadow-lg rounded-lg flex flex-col md:flex-row max-w-6xl w-full relative bg-gray-800 overflow-hidden">
+      <article className="shadow-lg rounded-lg flex flex-col md:flex-row max-w-6xl w-full relative overflow-hidden">
         <aside className="w-full md:w-1/2 relative hidden md:block">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-gray-900/30 backdrop-blur-sm"></div>
           <div
@@ -51,7 +51,7 @@ export default function Contact() {
         </aside>
 
         {/* Contact Form */}
-        <section className="p-8 w-full md:w-1/2 bg-gray-800/50 backdrop-blur-sm rounded-lg">
+        <section className="p-8 w-full md:w-1/2 backdrop-blur-sm rounded-lg">
           <header className="mb-8 text-center">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               Contact <span className="text-purple-400">Me</span>

@@ -10,7 +10,6 @@ import 'aos/dist/aos.css';
 import Footer from './components/Footer';
 import emailjs from '@emailjs/browser'
 
-
 const App = () => {
   useEffect(() => {
     AOS.init({
@@ -20,8 +19,8 @@ const App = () => {
   },[])
   return (
     <main className='bg-gray-950'>
-      <Hero />
       <Navbar />
+      <Hero />
       <About />
       <Skills />
       <Projects />

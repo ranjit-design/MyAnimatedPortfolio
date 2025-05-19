@@ -3,6 +3,10 @@
 
 html{
     scroll-behavior: smooth;
+
+}
+body {
+  @apply bg-gray-950 text-white;
 }
 .ran img{
     border-radius: 50%;
