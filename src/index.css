@@ -1,0 +1,9 @@
+/* src/index.css */
+@import "tailwindcss";
+
+html{
+    scroll-behavior: smooth;
+}
+.ran img{
+    border-radius: 50%;
+}
