@@ -7,7 +7,7 @@ import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Footer from './components/footer';
+import Footer from './components/Footer';
 import emailjs from '@emailjs/browser'
 
 
