@@ -47,15 +47,14 @@ const SkillBox = ({ image, title, description }) => {
 };
 export default function Skills() {
   return (
-    <section id="skills" className="relative min-h-screen overflow-hidden flex flex-col items-center justify-center text-white px-4 py-10">
+    <section id="skills" className="relative py-20 px-4 sm:px-8 lg:px-24 text-white flex flex-col items-center justify-center overflow-hidden">
       <div
-        className="absolute z-0 w-72 h-96 sm:w-96 sm:h-44 bg-[#cd3cf5] rounded-full blur-3xl opacity-50 top-10 sm:top-28 
-      left-1/2 transform -translate-x-1/2 "
+        className="absolute z-0 w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 bg-[#cd3cf5] rounded-full blur-3xl opacity-40 top-10 sm:top-24 left-1/2 -translate-x-1/2"
       ></div>
       <img
         src={imghero}
         alt="left picture"
-        className="absolute z-10 left-2 top-2 sm:left-16 sm:top-32 transform -rotate-12 w-24 h-auto sm:w-32 opacity-70"
+        className="absolute -z-10 left-2 -top-8 sm:left-16 sm:-top-6 transform -rotate-12 w-24 h-auto sm:w-28 opacity-60"
       />
       <div
         data-aos="fade-up"
@@ -95,7 +94,7 @@ export default function Skills() {
       <img
         src={imghero}
         alt="Right picture"
-        className="absolute z-10 right-2 top-2 sm:right-16 sm:top-32 transform rotate-12 w-24 h-auto sm:w-32 opacity-70"/>
+        className="absolute -z-10 right-2 -top-8 sm:right-16 sm:-top-6 transform rotate-12 w-24 h-auto sm:w-28 opacity-60"/>
     </section>
   );
 }
