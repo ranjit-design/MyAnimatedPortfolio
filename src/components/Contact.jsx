@@ -29,18 +29,19 @@ export default function Contact() {
   };
 
   return (
-    <section
-      data-aos="fade-up"
-      id="contact"
-      data-aos-delay="300"
-      className="min-h-screen overflow-hidden justify-center flex items-center p-6 mt-10 relative"
-    >
-      <article className="shadow-lg rounded-lg flex flex-col md:flex-row max-w-4xl w-full relative">
-        <aside className="w-full md:w-1/2 relative">
+    <main id="contact" className="min-h-screen bg-gray-900">
+      <section
+        data-aos="fade-up"
+        data-aos-delay="300"
+        className="container mx-auto px-4 py-24 flex items-center justify-center min-h-screen"
+      >
+      <article className="shadow-lg rounded-lg flex flex-col md:flex-row max-w-6xl w-full relative bg-gray-800 overflow-hidden">
+        <aside className="w-full md:w-1/2 relative hidden md:block">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-gray-900/30 backdrop-blur-sm"></div>
           <div
             className="absolute z-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] 
-            sm:w-[#400px] h-[300px] sm:h-[400px] bg-gradient-to-r from-[#6d2897] via-[#8e6cf5] to-[#bb61c5] 
-            shadow-[0_0_70px_rgba(182,0,182,0.7)] rounded-full "
+            sm:w-[400px] h-[300px] sm:h-[400px] bg-gradient-to-r from-[#6d2897] via-[#8e6cf5] to-[#bb61c5] 
+            shadow-[0_0_70px_rgba(182,0,182,0.7)] rounded-full"
           ></div>
           <img
             src={imghero}
@@ -50,11 +51,14 @@ export default function Contact() {
         </aside>
 
         {/* Contact Form */}
-        <section className="p-8 w-full md:w-1/2">
-          <header className="mb-6">
-            <h2 className="text-4xl font-bold text-center text-white">
-              Contact Me
+        <section className="p-8 w-full md:w-1/2 bg-gray-800/50 backdrop-blur-sm rounded-lg">
+          <header className="mb-8 text-center">
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+              Contact <span className="text-purple-400">Me</span>
             </h2>
+            <p className="text-gray-400">
+              Have a question or want to work together? Feel free to reach out!
+            </p>
           </header>
           <form ref={form} onSubmit={sendEmail} className="space-y-4">
             <div>
@@ -130,5 +134,6 @@ export default function Contact() {
         </section>
       </article>
     </section>
+  </main>
   );
 }

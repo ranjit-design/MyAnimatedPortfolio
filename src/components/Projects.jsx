@@ -61,10 +61,10 @@ export default function Projects() {
     },
   ];
   return (
-    <main  className="p-4" id="projects">
-      <section data-aos="fade-up" data-aos-delay="300">
-        <header className="text-center">
-          <h1 className="text-3xl text-white sm:text-4xl font-bold mb-6">
+    <main id="projects" className="pt-24 pb-16 px-4 min-h-screen">
+      <section data-aos="fade-up" data-aos-delay="300" className="max-w-6xl mx-auto">
+        <header className="text-center mb-12">
+          <h1 className="text-4xl text-white sm:text-5xl font-bold mb-4">
             My <span className="text-purple-400">Projects</span>
           </h1>
           <p className="text-gray-400 mt-2 sm:mt-4 text-sm sm:text-base">
@@ -77,7 +77,7 @@ export default function Projects() {
       <section
         data-aos="fade-up"
         data-aos-delay="500"
-        className="flex flex-wrap gap-4 justify-center mt-6"
+        className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center max-w-7xl mx-auto"
       >
         {listProjects.map((project, index) => (
           <ProjectCard
