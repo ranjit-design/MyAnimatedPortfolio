@@ -1,10 +1,37 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "emailjs-com";
 import imghero from "/imghero.png";
 
 export default function Contact() {
+  const form = useRef();
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_j3yh9uk", // your actual service ID
+        "template_ewsqk29", // your actual template ID
+        form.current,
+        "4SLsQih3I61JpyQrF" // your actual public key
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+          form.current.reset();
+        },
+        (error) => {
+          alert("Message failed to send. Please try again later.");
+        }
+      );
+  };
+
   return (
     <section
       data-aos="fade-up"
+      id="contact"
       data-aos-delay="300"
       className="min-h-screen overflow-hidden justify-center flex items-center p-6 mt-10 relative"
     >
@@ -22,14 +49,14 @@ export default function Contact() {
           />
         </aside>
 
-        {/*Contact Form*/}
+        {/* Contact Form */}
         <section className="p-8 w-full md:w-1/2">
           <header className="mb-6">
             <h2 className="text-4xl font-bold text-center text-white">
               Contact Us
             </h2>
           </header>
-          <form className="space-y-4">
+          <form ref={form} onSubmit={sendEmail} className="space-y-4">
             <div>
               <label
                 htmlFor="name"
@@ -42,6 +69,9 @@ export default function Contact() {
                 name="name"
                 id="name"
                 placeholder="Your Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
                 className="w-full px-4 py-2 text-white bg-gray-900 rounded-lg focus:outline-none"
               />
             </div>
@@ -57,12 +87,15 @@ export default function Contact() {
                 name="email"
                 id="email"
                 placeholder="Your Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
                 className="w-full px-4 py-2 text-white bg-gray-900 rounded-lg focus:outline-none"
               />
             </div>
             <div>
               <label
-                htmlFor="Message"
+                htmlFor="message"
                 className="block text-gray-300 font-medium mb-2"
               >
                 Message
@@ -72,11 +105,27 @@ export default function Contact() {
                 id="message"
                 rows="4"
                 placeholder="Your Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
                 className="w-full px-4 py-2 text-white bg-gray-900 rounded-lg focus:outline-none"
               ></textarea>
             </div>
-            <button className="w-full text-white border-2 py-2 px-6 focus:outline-none hover:bg-[#801b9c] 
-            hover:shadow-[0_0_40px_rgba(128,0,128,0.7)] rounded-full text-lg">Send Message</button>
+
+            {/* Hidden time field */}
+            <input
+              type="hidden"
+              name="time"
+              value={new Date().toLocaleString()}
+            />
+
+            <button
+              type="submit"
+              className="w-full text-white border-2 py-2 px-6 focus:outline-none hover:bg-[#801b9c] 
+              hover:shadow-[0_0_40px_rgba(128,0,128,0.7)] rounded-full text-lg"
+            >
+              Send Message
+            </button>
           </form>
         </section>
       </article>
