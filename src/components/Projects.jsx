@@ -2,6 +2,9 @@ import React from "react";
 import project1 from "/project1.png";
 import project2 from "/project2.png";
 import project3 from "/project3.png";
+import project4 from "/project4.png";
+import project5 from "/project5.png";
+import project6 from "/project6.png";
 
 const ProjectCard = ({ image, title, description, link }) => {
   return (
@@ -53,12 +56,31 @@ export default function Projects() {
       description: "Google Gemini is a advanced AI models.It is designed to understand and generate content across multiple types of input, including text, code, images, audio, and video — making it one of the most powerful and versatile AI models to date.",
       link: "https://google-gemini-67cj.vercel.app/",
     },
+    {image: project3,
+      title: "Calculator",
+      description: "Calculator project is to create a simple, user-friendly calculator application that performs basic arithmetic operations such as addition, subtraction, multiplication, and division. The project helps reinforce core programming concepts such as event handling, state management, and user interface design.",
+      link: "https://symphonious-choux-461fe5.netlify.app/",
+
+    },
     {
-      image: project3,
+      image: project4,
       title: "TicTacToe",
       description: "Tic-Tac-Toe game project is to create a simple, interactive two-player game that helps players take turns marking Xs and Os in a 3×3 grid. The game reinforces core programming concepts such as conditional logic, loops, event handling, and game state management.",
       link: "https://tictac555.netlify.app/",
     },
+    {
+      image: project5,
+      title: "Quiz App",
+      description: "Quiz App project is to create a simple, interactive quiz application that allows users to answer questions and receive feedback on their performance. The project helps reinforce core programming concepts such as event handling, state management, and user interface design.",
+      link: "https://melodious-sfogliatella-5c121e.netlify.app/",
+    },
+    {
+      image: project6,
+      title: "password generator",
+      description: "Password Generator project is to create a simple, user-friendly application that generates strong, random passwords based on user-defined criteria. The project helps reinforce core programming concepts such as string manipulation, random number generation, and user input handling.",
+      link: "https://sunny-mandazi-4f5273.netlify.app/",
+    },
+    
   ];
   return (
     <main id="projects" className="pt-24 pb-16 px-4 min-h-screen">
